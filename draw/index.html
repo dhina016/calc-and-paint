@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vector Draw</title>
+	<link rel="icon" href="icon.png">
+    <style>
+	*{
+    border:0;
+    padding:0;
+    margin:0;
+}
+
+canvas{
+    position: relative;
+    top: 30px;
+    left:460px;
+    border: 1px solid gray;
+}
+.top{
+    position: absolute;
+    top:1px;
+    left:5px;
+    padding:5px;
+    background-color: white;
+    border-radius: 10px;
+}
+#rc {
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background-color: teal;
+  padding: 10px; 
+}
+label , p{
+ padding: 4px; 
+ color : white;
+}
+#r, #reset {
+  border-radius: 25px;
+  background: #73AD21;
+  color : black;
+  background : white;
+  padding: 4px;  
+}
+</style>
+<script src="index.js"></script>
+</head>
+
+<body>
+<canvas id="canvas" width="800" height="550"></canvas>
+<div class="top">
+    <p><label style="font-size:20px;color:#000;">Fill: <input id="fillBox" type="checkbox"></label></p>
+<div id="rc">
+<center><label style="font-size:20px;color:#000;">Color</label>
+        <p><label>Fill Color: <input id="fillColor" type="color" value="#24B0D5"></label></p>
+        <p><label>Canvas Color: <input id="backgroundColor" type="color" value="#FFFFFF"></label></p>
+        <p><label>Stroke Color: <input id="strokeColor" type="color"></label></p></center>
+</div><br>
+<div id="rc">
+<center><label style="font-size:20px;color:#000;">Line Properties</label>
+        <p><label>Line width: <input id="lineWidth" type="range" step="1" min="1" max="200" value="4"></label></p>
+        <p><input type="radio" name="lineCap" value="butt" checked="checked">butt</p>
+        <p><input type="radio" name="lineCap" value="round">round</p>
+        <p><input type="radio" name="lineCap" value="square">square</p>
+</center>
+</div><br>
+<div id="rc">
+<center><label style="font-size:20px;color:#000;">Line Properties</label>
+        <p><input type="radio" name="shape" value="line" checked="checked">Line</p>
+		<p><input type="radio" name="shape" value="free">Free</p>
+        <p><input type="radio" name="shape" value="circle">Circle</p>
+        <p><input type="radio" name="shape" value="polygon">Polygon</p>
+
+    <p><label>Polygon Sides: <input id="polygonSides" type="range" step="1" min="3" max="10"></label></p>
+    <p><label>Polygon Angle: <input id="polygonAngle" type="range" step="22.5" min="0" max="90"></label></p>
+	
+	<a id="download" download="image.png"><button type="button" onClick="download()" id="r">Download</button></a>
+			<button id="reset" onClick="refresh()">Reset</button>
+</div>
+	</div>
+</body>
+</html>

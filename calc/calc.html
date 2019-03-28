@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="icon" href="icon.png">
+<style>
+textarea {
+  resize: none;
+   border-radius: 15px 15px 0px 0px;;
+  background: #000;
+  padding: 10px;
+  width: 200px;
+  height: 100px;
+   border: none; 
+ font-size: 25px;
+ color :#fff;
+ text-align : right;
+}
+#calculator{
+  border-radius: 15px;
+  background: #000;
+  padding: 1px; 
+  width: 220px;
+  height: 440px;
+}
+.but{
+ background-color : #696969;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width : 100%;
+}
+th, td {
+  background-color : #696969;
+}
+</style>
+
+  	</script>
+</head>
+<body>
+<div id="calculator">
+		<textarea id="resultArea" readonly rows="5" cols="25"></textarea>
+
+		<table>
+			<tr>
+				<td colspan="2" style="background-color : #2C2C2C;"><button id="clrTxt" class="but" style="background-color : #2C2C2C;">C</button></td>
+				<td colspan="1" style="background-color : #2C2C2C;"><button id="del" class="but" style="background-color : #2C2C2C;">&#9746;</button></td>
+	<td style="background-color : #FFA500;"><button id="op3" class="but" style="background-color : #FFA500;">&div;</button></td>
+	</tr>
+	
+
+			<tr>
+				<td><button id="num7" class="but">7</button></td>
+				<td><button id="num8" class="but">8</button></td>
+				<td><button id="num9" class="but">9</button></td>
+				<td style="background-color : #FFA500;"><button id="op2" class="but" style="background-color : #FFA500;">&times;</button></td>
+			</tr>
+
+			<tr>
+				<td><button id="num4" class="but">4</button></td>
+				<td><button id="num5" class="but">5</button></td>
+				<td><button id="num6" class="but">6</button></td>
+				<td style="background-color : #FFA500;"><button id="op1" class="but" style="background-color : #FFA500;">&minus;</button></td>
+			</tr>
+
+			<tr>
+				<td><button id="num1" class="but">1</button></td>
+				<td><button id="num2" class="but">2</button></td>
+				<td><button id="num3" class="but">3</button></td>
+				<td style="background-color : #FFA500;"><button id="op0" class="but" style="background-color : #FFA500;">&plus;</button></td>
+			</tr>
+
+			<tr>
+			<td  colspan="2" style="border-radius : 0px 0px 0px 8px;"><button id="num0" class="but">0</button></td>
+				<td><button id="decp" class="but">.</button></td>
+				<td style="border-radius : 0px 0px 8px 0px;background-color : #FFA500;"><button id="eq" class="but" style="background-color : #FFA500;">=</button></td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript" src="calc.js"></script>
+</body>
+</html>
